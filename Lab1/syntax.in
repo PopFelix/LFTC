@@ -1,0 +1,21 @@
+program = {statement}
+statement = (decl-statement|assign-statement|if-statement|while-statement|break-statement|call-statement)";"
+decl-statement = variable-statement|array-statement
+type = "int"|"char"|"bool"|"string"
+array-type = "vector"
+variable-statement = type identifier-list
+arr-statement = array_type "<"type ">" "[" non-zero-natural-number "]" identifier-list
+identifier-list = identifier ["=" expression] {"," identifier ["=" expression]}
+expression = int-expression|string-expression
+arithmetic_operator = "+"|"-"|"*"|"/"|"%"
+int-expression = integer-number|identifier|int-expression arithmetic-operation int-expression
+string-expression = tring-constant|identifier
+assign-statement = identifier "=" expression
+break-statement = "break"
+if-statement = "if" "(" condition ")" "{" {statement} "}" [ "else" "{" {statement} "}" ]
+comparison-operators = "=="|"<"|"<="|">"|">="|"!="
+condition = expression comparison-operators expression {("&&"|"||") condition}
+while-statement = "while" "(" condition ")" "{" {statement} "}"
+expression_list = expression {"," expression}
+call-statement = function-name "(" expression_list? ")"
+function-name = "print"|"scanInt"|"scanString"

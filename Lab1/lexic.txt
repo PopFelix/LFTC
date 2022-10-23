@@ -1,0 +1,24 @@
+Alphabet:
+a. Upper (A-Z) and lower case letters (a-z) of the English alphabet 
+b. Underline character '_';
+ c. Decimal digits (0-9);
+Lexic:
+a. Special symbols, representing:
+-operators +-*/% = == != <= >= && ||
+-separators {} () ; space \n “ ‘ ,
+-reserved words:
+int string if else while break vector print scanInt scanString  
+b. Identifiers
+- non-zero-digit = “1” | “2” | “3” | “4” | “5” | “6” | “7” | “8” | “9 “
+- zero-digit = “0” 
+- digit = zero-digit | non-zero-digit
+- alpha-character = “a” | “A” | …. | “z” | “Z”
+- underscore = “_”
+- non-digit = underscore | alpha-character
+- identifier = non-digit{non-digit|digit}
+c. Constants
+- non-zero-natural-number = non-zero-digit{non-zero-digit|digit}
+- integer-number = {“-“} non-zero-natural-number
+- char = non-digit | digit
+- string-content = {char}
+- string-constant = “ “ “ string-content “ “ “

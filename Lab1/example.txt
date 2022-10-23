@@ -1,0 +1,18 @@
+int n,max=-10000,min=10000,i=0;
+string s;
+vector<int>[3] arr;
+s=scanString;
+n=scanInt();
+while(i<n){
+	int x=scanInt();
+	if ( x > max )
+		max = x;
+		break;
+	if (x < min )
+		min = x;
+		arr[2]=min;
+	i=i+1;
+}
+print("The maximum number is "+ max);
+print("The minimum number is "+min);
+print("The read string is "+s);
