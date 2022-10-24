@@ -5,7 +5,7 @@ b. Underline character '_';
 Lexic:
 a. Special symbols, representing:
 -operators +-*/% = == != <= >= && ||
--separators {} () ; space \n “ ‘ ,
+-separators {} () [] ; space \n “ ‘ ,
 -reserved words:
 int string if else while break vector print scanInt scanString  
 b. Identifiers
