@@ -1,0 +1,15 @@
+int n,i,flag=0;
+n=scanInt();
+if (n == 0 || n == 1){
+flag=1;
+}
+for (i=2;i<=n/2;i++){
+if (n % i == 0){
+flag = 1;
+break;
+}
+}
+if (flag == 0)
+print("The number is prime");
+else
+print("The number is not prime");

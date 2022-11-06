@@ -1,0 +1,13 @@
+int a,b,c;
+a=scanInt();
+b=scanInt();
+c=scanInt();
+if (a >= b && a >= c){
+	print(a);
+}
+if (a <= b && b>=c){
+	print(b);
+}
+if (a <= c && b<= c){
+	print(c);
+}

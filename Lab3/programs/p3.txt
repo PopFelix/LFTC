@@ -1,0 +1,15 @@
+int n,max=-10000,min=10000,i=0;
+n=scanInt();
+while(i<n){
+	int x=scanInt();
+	if ( x > max )
+		max = x;
+	if (x < min )
+		min = x;
+	i++;
+
+}
+print("The maximum number is ");
+print(max);
+print("The minimum number is ");
+print(min);
