@@ -6,7 +6,7 @@ import java.nio.file.Path;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        LanguageScanner scanner = new LanguageScanner("programs/p1err.txt","res/tokens.in");
+        LanguageScanner scanner = new LanguageScanner("programs/p1.txt","res/tokens.in");
         try{
             scanner.scanProgram();
             System.out.println("Lexically correct!");

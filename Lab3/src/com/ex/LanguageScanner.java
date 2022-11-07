@@ -104,10 +104,13 @@ public class LanguageScanner {
         return false;
     }
 
-    private boolean verifyIdentifier() {
+    private boolean verifyIdentifier() throws ScannerException {
         var valid = Pattern.compile("^[a-zA-Z_][a-zA-Z0-9_]*");
         var matcher = valid.matcher(programContent.substring(currentIndex));
         if (!matcher.find()) {
+            if (Pattern.matches("^[0-9]+[a-zA-Z0-9_]*", programContent.substring(currentIndex))) {
+                throw new ScannerException("Lexical ERROR: Incorrect identifier declaration at line " + currentIndex);
+            }
             return false;
         }
         var result = matcher.group(0);
