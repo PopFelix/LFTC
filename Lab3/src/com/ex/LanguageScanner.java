@@ -65,7 +65,7 @@ public class LanguageScanner {
         var result = matcher.group(0);
         currentIndex += result.length() + 2;
         var pos = symbolTable.addConstant(result);
-        pif.add(new Pair<>("String constant: "+result, pos));
+        pif.add(new Pair<>("String constant: ", pos));
         return true;
     }
 
@@ -87,7 +87,7 @@ public class LanguageScanner {
             }
             result *= sign;
             var pos = symbolTable.addConstant(String.valueOf(result));
-            pif.add(new Pair<>("Int constant: "+result, pos));
+            pif.add(new Pair<>("Int constant: ", pos));
             return true;
         }
         return false;
@@ -116,7 +116,7 @@ public class LanguageScanner {
         var result = matcher.group(0);
         currentIndex += result.length();
         var pos = symbolTable.addIdentifier(result);
-        pif.add(new Pair<>("Identifier: "+result, pos));
+        pif.add(new Pair<>("Identifier: ", pos));
         return true;
     }
 
